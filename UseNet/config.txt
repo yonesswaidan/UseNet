@@ -1,0 +1,3 @@
+﻿NewsServer=news.dotsrc.org
+Username=yonswa01@easv365.dk
+Password=589955

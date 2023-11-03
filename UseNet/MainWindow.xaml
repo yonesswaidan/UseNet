@@ -1,0 +1,28 @@
+﻿<Window x:Class="Usenet.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="Usenet Reader" Height="400" Width="600">
+    <Grid>
+        <Label Content="News Server:" HorizontalAlignment="Left" Margin="10,10,0,0" VerticalAlignment="Top"/>
+        <TextBox x:Name="newsServerTextBox" HorizontalAlignment="Left" VerticalAlignment="Top" Width="250" Margin="100,10,0,0"/>
+        <Label Content="Username:" HorizontalAlignment="Left" Margin="10,40,0,0" VerticalAlignment="Top"/>
+        <TextBox x:Name="usernameTextBox" HorizontalAlignment="Left" VerticalAlignment="Top" Width="250" Margin="100,40,0,0"/>
+        <Label Content="Password:" HorizontalAlignment="Left" Margin="10,70,0,0" VerticalAlignment="Top"/>
+        <PasswordBox x:Name="passwordBox" HorizontalAlignment="Left" VerticalAlignment="Top" Width="250" Margin="100,70,0,0"/>
+        <Button Content="Save" HorizontalAlignment="Left" VerticalAlignment="Top" Width="75" Margin="100,100,0,0" Click="SaveButton_Click"/>
+        <Button Content="Connect" HorizontalAlignment="Left" VerticalAlignment="Top" Width="75" Margin="200,100,0,0" Click="ConnectButton_Click"/>
+        <Button Content="List Groups" HorizontalAlignment="Left" VerticalAlignment="Top" Width="100" Margin="300,100,0,0" Click="ListButton_Click"/>
+        <Button Content="Download Groups" HorizontalAlignment="Left" VerticalAlignment="Top" Width="150" Margin="100,190,0,0" Click="DownloadGroupsButton_Click"/>
+        <Label x:Name="ServerNameLabel" Content="" HorizontalAlignment="Left" Margin="10,130,0,0" VerticalAlignment="Top"/>
+        <ComboBox x:Name="groupsComboBox" HorizontalAlignment="Left" VerticalAlignment="Top" Width="250" Margin="100,160,0,0"/>
+        <ListView x:Name="articlesListView" HorizontalAlignment="Left" VerticalAlignment="Top" Width="500" Height="150" Margin="10,220,0,0">
+            <ListView.View>
+                <GridView>
+                    <GridViewColumn Header="Subject" Width="400" DisplayMemberBinding="{Binding Subject}" />
+                    <GridViewColumn Header="Author" Width="100" DisplayMemberBinding="{Binding Author}" />
+                </GridView>
+            </ListView.View>
+        </ListView>
+        <TextBox x:Name="articleTextBox" HorizontalAlignment="Left" VerticalAlignment="Top" Width="500" Height="150" Margin="10,220,0,0" Visibility="Collapsed"/>
+    </Grid>
+</Window>
